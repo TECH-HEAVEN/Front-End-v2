@@ -4,13 +4,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-
+import { ThemeProvider } from "@material-tailwind/react";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // 로컬 스토리지 초기화
 localStorage.clear();
 root.render(
   <BrowserRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </BrowserRouter>,
 );
 
