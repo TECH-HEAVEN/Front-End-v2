@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function CollectionProduct() {
   return (
     <section>
@@ -16,7 +18,7 @@ export function CollectionProduct() {
 
         <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
           <li>
-            <a href="#" className="relative block group">
+            <Link to="#" className="relative block group">
               <img
                 src="https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                 alt=""
@@ -32,11 +34,11 @@ export function CollectionProduct() {
                   Shop Now
                 </span>
               </div>
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a href="#" className="relative block group">
+            <Link to="#" className="relative block group">
               <img
                 src="https://images.unsplash.com/photo-1624623278313-a930126a11c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
                 alt=""
@@ -52,11 +54,11 @@ export function CollectionProduct() {
                   Shop Now
                 </span>
               </div>
-            </a>
+            </Link>
           </li>
 
           <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-            <a href="#" className="relative block group">
+            <Link to="#" className="relative block group">
               <img
                 src="https://images.unsplash.com/photo-1593795899768-947c4929449d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80"
                 alt=""
@@ -72,7 +74,7 @@ export function CollectionProduct() {
                   Shop Now
                 </span>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
