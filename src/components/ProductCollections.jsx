@@ -9,7 +9,7 @@ export function ProductCollections() {
   // 상품 목록을 가져오는 로직 (예시로 배열로 설정)
   useEffect(() => {
     // 상품 데이터를 fetch 혹은 다른 방법으로 가져옵니다
-    const fetchedProducts = new Array(97).fill({});
+    const fetchedProducts = new Array(5).fill({});
     setProducts(fetchedProducts);
   }, []);
 
