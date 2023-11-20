@@ -1,16 +1,36 @@
 import { Route, Routes } from "react-router";
 import Template from "../templates/Template";
-import Main from "../page/Main";
-import Product from "../page/Product";
+import Main from "../pages/Main";
+import Product from "../pages/Product";
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
+import { AuthProvider } from "../context/AuthContext";
+import TokenStorage from "../services/localStorage/token";
+import HttpClient from "../network/http";
+import AuthService from "../services/api/auth";
+import { AuthErrorEventBus } from "../context/AuthContext";
 
 const MyRoutes = () => {
+  const baseURL = process.env.REACT_APP_BASE_URL;
+  const tokenStorage = new TokenStorage();
+  const httpClient = new HttpClient(baseURL);
+  const authService = new AuthService(httpClient, tokenStorage);
+  const authErrorEventBus = new AuthErrorEventBus();
   return (
-    <Routes>
-      <Route element={<Template />}>
-        <Route path="/" element={<Main numCards={4} />} />
-        <Route path="/product" element={<Product />} />
-      </Route>
-    </Routes>
+    <AuthProvider
+      authService={authService}
+      authErrorEventBus={authErrorEventBus}
+    >
+      <Routes>
+        <Route element={<Template />}>
+          <Route path="/" element={<Main numCards={4} />} />
+          <Route path="/product" element={<Product />} />
+
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
+      </Routes>
+    </AuthProvider>
   );
 };
 
