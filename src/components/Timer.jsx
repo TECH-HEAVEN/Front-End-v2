@@ -32,7 +32,7 @@ export function Timer() {
       </div>
       <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": 4 }}></span>
+          <span style={{ "--value": counter }}></span>
         </span>
         sec
       </div>

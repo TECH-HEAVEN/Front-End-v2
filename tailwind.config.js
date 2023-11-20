@@ -14,5 +14,6 @@ module.exports = withMT({
   plugins: [
     require("@tailwindcss/forms"), // Add @tailwindcss/forms plugin
     require("daisyui"), // Add daisyui plugin
+    require("flowbite/plugin"),
   ],
 });

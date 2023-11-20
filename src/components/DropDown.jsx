@@ -3,7 +3,6 @@ import {
   MenuHandler,
   MenuList,
   MenuItem,
-  Button,
 } from "@material-tailwind/react";
 
 export function MenuDefault() {

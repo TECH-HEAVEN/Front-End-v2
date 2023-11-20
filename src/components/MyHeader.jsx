@@ -1,6 +1,9 @@
 import { MenuDefault } from "./DropDown";
+import { Link } from "react-router-dom";
 
 export default function Header() {
+  const token = localStorage.getItem("access_token");
+  const isLoggedIn = token !== null;
   return (
     <header className="bg-white">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -93,8 +96,8 @@ export default function Header() {
                   </button>
                 </div>
 
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="block shrink-0 rounded-full bg-white p-2.5 text-gray-600 shadow-sm hover:text-gray-700"
                 >
                   <span className="sr-only">Notifications</span>
@@ -112,7 +115,7 @@ export default function Header() {
                       d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
 
               <span
@@ -120,15 +123,29 @@ export default function Header() {
                 className="block h-6 w-px rounded-full bg-gray-200"
               ></span>
 
-              {/*<a href="#" className="block shrink-0">*/}
-              {/*  <span className="sr-only">Profile</span>*/}
-              {/*  <img*/}
-              {/*    alt="Man"*/}
-              {/*    src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"*/}
-              {/*    className="h-10 w-10 rounded-full object-cover"*/}
-              {/*  />*/}
-              {/*</a>*/}
-              <MenuDefault />
+              <div className="flex items-center gap-4">
+                {isLoggedIn ? (
+                  <MenuDefault />
+                ) : (
+                  <div className="sm:flex sm:gap-4">
+                    <a
+                      className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
+                      href="/login"
+                    >
+                      Login
+                    </a>
+
+                    <div className="hidden sm:flex">
+                      <a
+                        className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                        href="/signup"
+                      >
+                        Register
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="block md:hidden">

@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export function SideMenu() {
   return (
     <div className="flex items-start w-80">
       <ul>
         <li>
-          <a
-            href=""
+          <Link
+            to="#"
             className="flex items-center gap-2 border-s-[3px] border-blue-500 bg-blue-50 px-4 py-3 text-blue-700"
           >
             <svg
@@ -28,12 +30,12 @@ export function SideMenu() {
             </svg>
 
             <span className="text-sm font-medium"> General </span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href=""
+          <Link
+            to="#"
             className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
           >
             <svg
@@ -52,12 +54,12 @@ export function SideMenu() {
             </svg>
 
             <span className="text-sm font-medium"> Teams </span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href=""
+          <Link
+            to="#"
             className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
           >
             <svg
@@ -76,12 +78,12 @@ export function SideMenu() {
             </svg>
 
             <span className="text-sm font-medium"> Billing </span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href=""
+          <Link
+            to="#"
             className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
           >
             <svg
@@ -100,12 +102,12 @@ export function SideMenu() {
             </svg>
 
             <span className="text-sm font-medium"> Invoices </span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a
-            href=""
+          <Link
+            to="#"
             className="flex items-center gap-2 border-s-[3px] border-transparent px-4 py-3 text-gray-500 hover:border-gray-100 hover:bg-gray-50 hover:text-gray-700"
           >
             <svg
@@ -124,7 +126,7 @@ export function SideMenu() {
             </svg>
 
             <span className="text-sm font-medium"> Account </span>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

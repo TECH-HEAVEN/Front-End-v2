@@ -4,8 +4,6 @@ import { CircularPagination } from "../components/Pagination";
 import { FeaturedProduct } from "../components/FeaturedProduct";
 import { CollectionProduct } from "../components/CollectionProduct";
 import React, { useState } from "react";
-import { SideMenu } from "../components/SideMenu";
-import { CarouselCustomNavigation } from "../components/CarouselCustomNavigation";
 import { Timer } from "../components/Timer";
 const Main = ({ numCards }) => {
   // // CollectionCard 컴포넌트의 배열을 생성합니다.
