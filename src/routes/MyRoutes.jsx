@@ -7,7 +7,7 @@ const MyRoutes = () => {
   return (
     <Routes>
       <Route element={<Template />}>
-        <Route path="/" element={<Main numCards={5} />} />
+        <Route path="/" element={<Main numCards={4} />} />
         <Route path="/product" element={<Product />} />
       </Route>
     </Routes>

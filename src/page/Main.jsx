@@ -3,8 +3,10 @@ import { CollectionCard } from "../components/CollectionCard";
 import { CircularPagination } from "../components/Pagination";
 import { FeaturedProduct } from "../components/FeaturedProduct";
 import { CollectionProduct } from "../components/CollectionProduct";
-import { useState } from "react";
+import React, { useState } from "react";
+import { SideMenu } from "../components/SideMenu";
 import { CarouselCustomNavigation } from "../components/CarouselCustomNavigation";
+import { Timer } from "../components/Timer";
 const Main = ({ numCards }) => {
   // // CollectionCard 컴포넌트의 배열을 생성합니다.
   // const cards = Array.from({ length: numCards }, (_, index) => (
@@ -32,7 +34,9 @@ const Main = ({ numCards }) => {
     <>
       <div className="bg-white">
         <div className="mx-auto max-w-screen-2xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+          <Timer />
           <div className="collection-card-container">{currentCards}</div>
+
           <div className="pagination-container">
             <CircularPagination
               active={currentPage}
@@ -42,6 +46,7 @@ const Main = ({ numCards }) => {
               onPrev={prevPage}
             />
           </div>
+
           <FeaturedProduct />
           <CollectionProduct />
         </div>

@@ -5,7 +5,7 @@ export function CarouselCustomNavigation() {
   return (
     <>
       <Carousel
-        className="rounded-2xl w-full h-[500px]"
+        className="rounded-2xl w-auto h-[500px]"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
             {new Array(length).fill("").map((_, i) => (
