@@ -1,9 +1,10 @@
-import { MenuDefault } from "./DropDown";
+import { DropDown } from "./DropDown";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   const token = localStorage.getItem("access_token");
   const isLoggedIn = token !== null;
+
   return (
     <header className="bg-white">
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
@@ -125,7 +126,7 @@ export default function Header() {
 
               <div className="flex items-center gap-4">
                 {isLoggedIn ? (
-                  <MenuDefault />
+                  <DropDown />
                 ) : (
                   <div className="sm:flex sm:gap-4">
                     <a

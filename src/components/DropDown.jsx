@@ -4,8 +4,14 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
+import { useAuth } from "../context/AuthContext";
 
-export function MenuDefault() {
+export function DropDown() {
+  const { logout } = useAuth();
+  const handleLogout = async () => {
+    await logout();
+    window.location.href = "/";
+  };
   return (
     <Menu>
       <MenuHandler>
@@ -25,7 +31,7 @@ export function MenuDefault() {
         <MenuItem>주문 내역</MenuItem>
         <MenuItem>환불 내역</MenuItem>
         <MenuItem>내 리뷰 목록</MenuItem>
-        <MenuItem>로그아웃</MenuItem>
+        <MenuItem onClick={handleLogout}>로그아웃</MenuItem>
       </MenuList>
     </Menu>
   );
