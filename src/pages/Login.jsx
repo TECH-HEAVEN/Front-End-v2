@@ -1,6 +1,7 @@
 import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { SocialButton } from "../components/SocialButton";
 
 const Login = () => {
   const location = useLocation();
@@ -110,6 +111,7 @@ const Login = () => {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 로그인
               </h2>
+              <SocialButton />
               {successMessage && (
                 <div className="alert alert-success">{successMessage}</div>
               )}
@@ -179,7 +181,8 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="w-full px-5 py-3 text-base font-medium text-center text-white rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  style={{ background: "#111827" }}
                 >
                   로그인 하기
                 </button>

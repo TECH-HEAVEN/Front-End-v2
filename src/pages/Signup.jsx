@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import { SocialButton } from "../components/SocialButton";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -110,6 +111,7 @@ const Signup = () => {
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                 회원가입
               </h2>
+              <SocialButton />
               {error && <div className="alert alert-danger">{error}</div>}
               <form className="mt-8 space-y-6" onSubmit={onSubmit}>
                 <div>
@@ -186,7 +188,8 @@ const Signup = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="w-full px-5 py-3 text-base font-medium text-center text-white rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  style={{ background: "#111827" }}
                 >
                   새로운 계정 생성하기
                 </button>

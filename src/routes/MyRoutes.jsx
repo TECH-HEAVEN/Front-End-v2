@@ -9,6 +9,7 @@ import TokenStorage from "../services/localStorage/token";
 import HttpClient from "../network/http";
 import AuthService from "../services/api/auth";
 import { AuthErrorEventBus } from "../context/AuthContext";
+import { OAuthLoginHandler } from "../components/OAuthLoginHandler";
 
 const MyRoutes = () => {
   const baseURL = process.env.REACT_APP_BASE_URL;
@@ -28,6 +29,7 @@ const MyRoutes = () => {
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/token-handler" element={<OAuthLoginHandler />} />
         </Route>
       </Routes>
     </AuthProvider>
