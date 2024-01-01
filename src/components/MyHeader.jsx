@@ -65,15 +65,14 @@ export default function Header() {
               <div className="flex items-center gap-4">
                 <div className="relative">
                   <label className="sr-only" htmlFor="search">
-                    {" "}
-                    Search{" "}
+                    검색
                   </label>
 
                   <input
                     className="h-10 w-full rounded-full border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56"
                     id="search"
                     type="search"
-                    placeholder="Search website..."
+                    placeholder="어떤 것을 찾으시나요?"
                   />
 
                   <button
@@ -135,7 +134,7 @@ export default function Header() {
                       href="/login"
                       style={{ background: "#111827" }}
                     >
-                      Login
+                      로그인
                     </a>
 
                     <div className="hidden sm:flex">
@@ -144,7 +143,7 @@ export default function Header() {
                         href="/signup"
                         style={{ color: "#111827" }}
                       >
-                        Register
+                        회원가입
                       </a>
                     </div>
                   </div>
