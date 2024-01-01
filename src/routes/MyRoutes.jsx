@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router";
 import Template from "../templates/Template";
 import Main from "../pages/Main";
-import Product from "../pages/Product";
 import Signup from "../pages/Signup";
 import Login from "../pages/Login";
 import { AuthProvider } from "../context/AuthContext";
@@ -24,8 +23,7 @@ const MyRoutes = () => {
     >
       <Routes>
         <Route element={<Template />}>
-          <Route path="/" element={<Main numCards={4} />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/" element={<Main />} />
 
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
